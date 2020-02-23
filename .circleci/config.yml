@@ -9,8 +9,8 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
-            - run: npm i create-elm-app -g
-            - run: elm-app test
+            - run: npm i create-elm-app
+            - run: npx elm-app test
 
 workflows:
   build-and-test:

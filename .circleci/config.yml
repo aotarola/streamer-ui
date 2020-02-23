@@ -7,9 +7,9 @@ jobs:
       name: "node/default"
     steps:
       - checkout
+      - run: npm init --yes
       - node/with-cache:
           steps:
-            - run: npm init --yes
             - run: npm i create-elm-app
             - run: npx elm-app test
 

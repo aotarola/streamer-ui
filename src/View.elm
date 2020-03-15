@@ -36,7 +36,7 @@ view model =
                 , width fill
                 ]
                 { onChange = OnChange
-                , text = "http://remote-file-origin"
+                , text = model
                 , placeholder = Nothing
 
                 -- , placeholder =

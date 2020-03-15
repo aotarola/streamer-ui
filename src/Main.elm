@@ -1,20 +1,21 @@
 module Main exposing (main)
 
 import Browser
-import Html exposing (Html, text)
 import Model exposing (Model)
 import Msg exposing (Msg(..))
 import View exposing (view)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    ( model, Cmd.none )
+update msg _ =
+    case msg of
+        OnChange str ->
+            ( str, Cmd.none )
 
 
 init : () -> ( Model, Cmd Msg )
 init _ =
-    ( "Hello World", Cmd.none )
+    ( "http://remote-file-origin", Cmd.none )
 
 
 main : Program () Model Msg
